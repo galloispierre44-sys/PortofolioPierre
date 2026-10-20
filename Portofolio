@@ -1,11 +1,14 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8">
+<html lang="fr">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <title>Pierre Gallois – Photographe</title>
-<style>:root{--ink:#1d1d1f;--soft:#86868b;--accent:#0071e3;
---display:"SF Pro Display","Inter","-apple-system","Helvetica Neue",sans-serif;--text:"Inter","-apple-system","Helvetica Neue",sans-serif}
+<style>
+:root{--ink:#1d1d1f;--soft:#86868b;--accent:#0071e3;--display:"SF Pro Display","Inter","-apple-system","Helvetica Neue",sans-serif;--text:"Inter","-apple-system","Helvetica Neue",sans-serif}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{background:#f5f5f7;color:var(--ink);font:400 1.05rem/1.6 var(--text);overflow-x:hidden;letter-spacing:-0.01em}
@@ -13,21 +16,14 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
 section{padding:clamp(5rem,12vw,9rem) 0;scroll-margin-top:3rem}
-
 .bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#f5f5f7}
 .bg i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 25s ease-in-out infinite alternate}
 .bg i:nth-child(1){width:50vw;height:50vw;background:#dbeafe;left:-10vw;top:-10vw}
 .bg i:nth-child(2){width:45vw;height:45vw;background:#fce7f3;right:-5vw;top:20vh;animation-delay:-8s}
 .bg i:nth-child(3){width:40vw;height:40vw;background:#e0f2fe;left:15vw;bottom:-10vw;animation-delay:-15s}
 @keyframes drift{to{transform:translate(6vw,8vh) scale(1.1)}}
-
-.glass{position:relative;border-radius:24px;background:rgba(255, 255, 255, 0.65);
--webkit-backdrop-filter:blur(30px) saturate(1.8);backdrop-filter:blur(30px) saturate(1.8);
-border:1px solid rgba(255, 255, 255, 0.8);box-shadow:0 20px 40px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s cubic-bezier(0.16, 1, 0.3, 1)}
+.glass{position:relative;border-radius:24px;background:rgba(255, 255, 255, 0.65);-webkit-backdrop-filter:blur(30px) saturate(1.8);backdrop-filter:blur(30px) saturate(1.8);border:1px solid rgba(255, 255, 255, 0.8);box-shadow:0 20px 40px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s cubic-bezier(0.16, 1, 0.3, 1)}
 .glass:hover{transform:translateY(-3px);box-shadow:0 30px 60px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1)}
-
-/* Écran de chargement / Bienvenue style iPhone LockScreen */
 #welcomeScreen{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:rgba(245, 245, 247, 0.75);-webkit-backdrop-filter:blur(40px) saturate(2);backdrop-filter:blur(40px) saturate(2);transition:opacity .6s ease, visibility .6s ease;padding:2rem}
 #welcomeScreen.fade-out{opacity:0;visibility:hidden}
 .welcome-card{max-width:480px;width:100%;padding:3rem 2.5rem;text-align:center;border-radius:36px;background:rgba(255, 255, 255, 0.8);border:1px solid rgba(255, 255, 255, 0.95);box-shadow:0 30px 60px rgba(0,0,0,0.12)}
@@ -35,7 +31,6 @@ transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s cubic-bez
 .welcome-card p{color:var(--soft);font-size:1.05rem;margin-bottom:2rem;line-height:1.5}
 .camera-icon{font-size:3rem;margin-bottom:1rem;display:inline-block;animation:bounce 2s infinite ease-in-out}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-
 nav{position:fixed;top:1.2rem;left:50%;transform:translateX(-50%);z-index:40;display:flex;align-items:center;gap:.4rem;padding:.35rem;border-radius:98px;background:rgba(255, 255, 255, 0.75);-webkit-backdrop-filter:blur(25px);backdrop-filter:blur(25px);border:1px solid rgba(255, 255, 255, 0.8);box-shadow:0 10px 30px rgba(0,0,0,0.05)}
 nav a,nav .dd>button{all:unset;cursor:pointer;padding:.5rem 1.1rem;border-radius:98px;font-weight:500;font-size:.9rem;transition:background .2s, color .2s}
 nav a:hover,nav .dd>button:hover,nav .dd:focus-within>button{background:rgba(0,0,0,0.04)}
@@ -46,7 +41,6 @@ nav a.cta:hover{background:#0077ed}
 .dd:hover .menu,.dd.open .menu,.dd:focus-within .menu{opacity:1;visibility:visible;transform:none}
 .menu a{display:block;border-radius:10px;padding:.5rem .8rem}
 .menu a:hover{background:rgba(0,113,227,0.08);color:var(--accent)}
-
 .hero{min-height:92svh;display:grid;align-content:center;padding:8rem 0 4rem}
 .vf{position:relative;padding:clamp(2rem,6vw,4rem);border-radius:32px;background:rgba(255,255,255,0.4);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.6)}
 h1{font:700 clamp(3.2rem,12vw,8.5rem)/0.95 var(--display);letter-spacing:-0.03em;color:var(--ink);opacity:0;transform:translateY(20px);transition:all 1s cubic-bezier(0.16, 1, 0.3, 1)}
@@ -63,10 +57,8 @@ h1{font:700 clamp(3.2rem,12vw,8.5rem)/0.95 var(--display);letter-spacing:-0.03em
 .btn.main:hover{background:#0077ed;transform:scale(1.02)}
 .btn.glass{background:rgba(255,255,255,0.8);border:1px solid rgba(0,0,0,0.08)}
 .btn.glass:hover{background:#fff;transform:scale(1.02)}
-
 h2{font:700 clamp(2.0rem,4.5vw,3rem)/1.1 var(--display);letter-spacing:-0.02em;margin-bottom:.8rem}
 .lead{color:var(--soft);max-width:32rem;margin-bottom:3rem;font-size:1.05rem}
-
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
 .tile{display:block;text-decoration:none;padding:.8rem}
 .tile .cover{aspect-ratio:4/5;border-radius:18px;overflow:hidden;display:grid;place-items:center;color:#fff;text-align:center;font-size:.85rem}
@@ -75,16 +67,8 @@ h2{font:700 clamp(2.0rem,4.5vw,3rem)/1.1 var(--display);letter-spacing:-0.02em;m
 .tile h3{font:600 1.15rem var(--display);padding:1rem .5rem .2rem;display:flex;justify-content:space-between;align-items:baseline}
 .tile h3 span{font-size:.85rem;color:var(--accent);font-weight:500}
 .tile p{padding:0 .5rem .6rem;color:var(--soft);font-size:.85rem}
-
-#apropos {
-  margin-top: 4rem;
-}
-
-#contact {
-  padding-top: 6rem;
-}
-
-/* Grille des tarifs modernisée */
+#apropos{margin-top:4rem}
+#contact{padding-top:6rem}
 .tarifs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:2rem}
 .tarif-card{padding:2.5rem;border-radius:28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.9)}
 .tarif-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:6px;background:var(--accent);opacity:0.8}
@@ -95,8 +79,6 @@ h2{font:700 clamp(2.0rem,4.5vw,3rem)/1.1 var(--display);letter-spacing:-0.02em;m
 .tarif-detail{padding:1rem 1.2rem;background:rgba(0,113,227,0.04);border-radius:14px;font-size:.9rem;color:var(--ink);border-left:3px solid var(--accent);margin-bottom:2rem}
 .tarif-btn{align-self:flex-start;text-decoration:none;font-weight:600;font-size:.9rem;padding:.7rem 1.4rem;border-radius:98px;background:var(--accent);color:#fff;transition:background .2s, transform .2s}
 .tarif-btn:hover{background:#0077ed;transform:scale(1.02)}
-
-/* Style des cartes de sélection dans le formulaire */
 .checkbox-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem;margin-top:.4rem}
 .checkbox-item{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.1rem;background:rgba(255,255,255,0.7);border:1px solid rgba(0,0,0,0.08);border-radius:14px;cursor:pointer;transition:all .2s ease;font-weight:500;font-size:.95rem}
 .checkbox-item:hover{background:#fff;border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.04)}
@@ -105,32 +87,25 @@ h2{font:700 clamp(2.0rem,4.5vw,3rem)/1.1 var(--display);letter-spacing:-0.02em;m
 .checkbox-item input:checked::before{transform:scale(1)}
 .checkbox-item input:checked{border-color:var(--accent);background:rgba(0,113,227,0.08)}
 .checkbox-item.selected{background:rgba(0,113,227,0.06);border-color:var(--accent);color:var(--accent)}
-
-/* Style FAQ */
 .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
 .faq-card{padding:2rem;border-radius:24px}
 .faq-card h3{font:600 1.1rem var(--display);margin-bottom:.6rem;color:var(--ink)}
 .faq-card p{color:var(--soft);font-size:.95rem;line-height:1.6}
-
 .about-box{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;padding:3rem;border-radius:28px;background:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1452587925148-ce544e777ae0?auto=format&fit=crop&w=1200&q=80') center/cover;color:#fff}
 .about-box h2{color:#fff}
 .about-box p{color:rgba(255,255,255,0.9);margin-bottom:1.5rem}
-
 dialog.about-modal, dialog.legal-modal{border:0;padding:0;background:transparent;max-width:540px;width:90vw;margin:auto;border-radius:32px}
 dialog.about-modal::backdrop, dialog.legal-modal::backdrop{background:rgba(0,0,0,0.6);-webkit-backdrop-filter:blur(25px);backdrop-filter:blur(25px)}
 .modal-content{padding:2.5rem;background:rgba(255,255,255,0.85);-webkit-backdrop-filter:blur(40px) saturate(2);backdrop-filter:blur(40px) saturate(2);border:1px solid rgba(255,255,255,0.95);border-radius:32px;box-shadow:0 30px 60px rgba(0,0,0,0.15);text-align:left}
 .modal-content h3{font:700 1.8rem var(--display);margin-bottom:1rem;color:var(--ink);letter-spacing:-0.02em}
 .modal-content p{color:var(--soft);margin-bottom:1.2rem;font-size:1rem;line-height:1.6}
 .modal-close{margin-top:1.5rem;width:100%;text-align:center}
-
 .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:2rem}
-
 dialog.admin-modal{border:0;padding:0;background:transparent;max-width:600px;width:90vw;margin:auto;border-radius:32px}
 dialog.admin-modal::backdrop{background:rgba(0,0,0,0.7);-webkit-backdrop-filter:blur(25px);backdrop-filter:blur(25px)}
 .admin-content{padding:2.5rem;background:rgba(255,255,255,0.9);-webkit-backdrop-filter:blur(40px) saturate(2);backdrop-filter:blur(40px) saturate(2);border-radius:32px;box-shadow:0 30px 60px rgba(0,0,0,0.2)}
 .admin-list{max-height:300px;overflow-y:auto;margin:1.5rem 0;display:grid;gap:1rem}
 .admin-item{padding:1rem;border-radius:12px;background:rgba(0,0,0,0.03);display:flex;justify-content:space-between;align-items:center;gap:1rem}
-
 .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.5rem}
 .card{position:relative;border-radius:20px;overflow:hidden;cursor:zoom-in;clip-path:inset(0 0 100% 0 round 20px);transition:clip-path .9s cubic-bezier(0.16, 1, 0.3, 1)}
 .card.in{clip-path:inset(0 round 20px)}
@@ -140,11 +115,9 @@ dialog.admin-modal::backdrop{background:rgba(0,0,0,0.7);-webkit-backdrop-filter:
 .card:hover img{transform:scale(1.04)}
 .ph{display:grid;place-items:center;padding:1rem;color:#fff;font-weight:600;font-size:.8rem;text-align:center;background:linear-gradient(135deg,#0071e3,#42a5f5)}
 .ph small{display:block;margin-top:.3rem;font-weight:400;font-size:.7rem;opacity:.8}
-
 .desc-card{padding:2rem;border-radius:20px;margin-bottom:2.5rem;background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.9)}
 .desc-card h3{font:600 1.4rem var(--display);margin-bottom:.5rem;color:var(--accent)}
 .desc-card p{color:var(--soft);font-size:1.05rem}
-
 .contact-container{padding:3rem;border-radius:28px;background:rgba(255, 255, 255, 0.75);-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);border:1px solid rgba(255, 255, 255, 0.9);box-shadow:0 30px 60px rgba(0,0,0,0.06)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start}
 .contact-info-list{display:grid;gap:1.5rem;margin-top:2rem}
@@ -153,14 +126,12 @@ dialog.admin-modal::backdrop{background:rgba(0,0,0,0.7);-webkit-backdrop-filter:
 .contact-item h4{font:600 1rem var(--display);margin-bottom:.2rem}
 .contact-item a,.contact-item p{color:var(--soft);text-decoration:none;font-size:.95rem;transition:color .2s}
 .contact-item a:hover{color:var(--accent)}
-
 form{display:grid;gap:1.2rem}
 label{display:grid;gap:.4rem;font-weight:600;font-size:.88rem}
 input,select,textarea{font:400 1rem var(--text);color:var(--ink);padding:.75rem 1rem;border-radius:12px;border:1px solid rgba(0,0,0,0.1);background:rgba(255,255,255,0.7);transition:all .2s}
 input:focus,select:focus,textarea:focus{outline:none;background:#fff;border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,113,227,0.15)}
 textarea{min-height:100px;resize:vertical}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-
 .check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;font-size:.85rem;color:var(--soft)}
 .check input{margin-top:.2rem;width:1rem;height:1rem}
 .hp{position:absolute;left:-9999px}
@@ -168,22 +139,18 @@ form button{all:unset;text-align:center;cursor:pointer;background:var(--accent);
 form button:hover{background:#0077ed;transform:scale(1.01)}
 form button:disabled{opacity:.5}
 #status{min-height:1.4rem;font-weight:600;font-size:.9rem}
-
 footer{padding:3rem 0 4rem;text-align:center;color:var(--soft);font-size:.85rem}
 .footer-links{margin-top:.8rem;display:flex;justify-content:center;gap:1.5rem}
 .footer-links button{all:unset;cursor:pointer;color:var(--soft);transition:color .2s}
 .footer-links button:hover{color:var(--accent);text-decoration:underline}
-
 dialog#lb{border:0;padding:0;background:transparent;max-width:94vw;max-height:94vh;margin:auto;border-radius:20px}
 dialog#lb::backdrop{background:rgba(0,0,0,0.7);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
 dialog#lb img{display:block;max-width:92vw;max-height:78vh;object-fit:contain;margin:0 auto;border-radius:16px}
 dialog#lb .bar{display:flex;justify-content:center;gap:.6rem;padding-top:1rem}
 dialog#lb .bar button{all:unset;cursor:pointer;padding:.5rem 1.2rem;border-radius:98px;background:rgba(255,255,255,0.15);color:#fff;font-weight:500;font-size:.9rem;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}
 dialog#lb .bar button:hover{background:rgba(255,255,255,0.3)}
-
 @media(max-width:760px){.contact-grid,.two,.about-box{grid-template-columns:1fr}nav .brand{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1,.chip,.pitch,.btns{opacity:1;transform:none}.card{clip-path:none}}
-
 nav .brand{font:700 0.95rem var(--display);padding:.5rem 1.1rem}
 .pagehead{padding:8rem 0 1rem}
 .back{display:inline-block;text-decoration:none;font-weight:600;padding:.5rem 1.1rem;border-radius:98px;margin-bottom:2rem;font-size:.9rem}
@@ -196,10 +163,10 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 .featured{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
 .featured .card:nth-child(2){margin-top:2.5rem}
 @media(max-width:760px){.featured{grid-template-columns:1fr}.featured .card:nth-child(2){margin-top:0}}
-</style></head>
+</style>
+</head>
 <body data-page="home">
 
-<!-- Écran de bienvenue / Chargement style iPhone LockScreen -->
 <div id="welcomeScreen">
   <div class="welcome-card glass">
     <div class="camera-icon">📸</div>
@@ -212,7 +179,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
 <nav id="nav" aria-label="Navigation principale"></nav>
 
-<!-- ACCUEIL -->
 <div id="homeView"><header class="hero wrap">
   <div class="vf glass">
     <h1>Pierre<br>Gallois</h1>
@@ -238,7 +204,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
   </div>
 </section>
 
-<!-- Modale style boîte iPhone pour le À propos -->
 <dialog id="aboutModal" class="about-modal">
   <div class="modal-content">
     <h3>Mon parcours & ma vision</h3>
@@ -251,7 +216,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
   </div>
 </dialog>
 
-<!-- Modale Mentions Légales -->
 <dialog id="legalModal" class="legal-modal">
   <div class="modal-content">
     <h3>Mentions Légales</h3>
@@ -264,11 +228,9 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
   </div>
 </dialog>
 
-<!-- Bloc Contact épuré et moderne -->
 <section class="wrap" id="contact">
   <h2>Contact & Réservation</h2>
   <p class="lead">Une question ou une envie de séance ? Remplissez le formulaire ou contactez-moi directement.</p>
-  
   <div class="contact-container">
     <div class="contact-grid">
       <div>
@@ -294,7 +256,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
           <a class="btn main" id="mailBtn" style="padding:.6rem 1.2rem; font-size:.9rem;">Envoyer un e-mail</a>
         </div>
       </div>
-
       <form id="form" novalidate style="padding:0; background:transparent; border:none; box-shadow:none;">
         <div class="two">
           <label>Nom<input name="nom" required autocomplete="family-name"></label>
@@ -304,11 +265,9 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
         <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
         <label>Confirmer l’e-mail (Vérification)<input name="email2" id="email2" type="email" required autocomplete="off" placeholder="Retapez votre adresse e-mail"></label>
         <div class="hint" id="emailhint" aria-live="polite"></div>
-        
         <label>Sélectionnez vos prestations et options :
           <div class="checkbox-group" id="checkboxGroup"></div>
         </label>
-
         <label>Votre message<textarea name="message" placeholder="Date, lieu ou précisions utiles…"></textarea></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label class="check"><input type="checkbox" name="ok" required>J’accepte d’être recontacté(e) par Pierre Gallois.</label>
@@ -321,7 +280,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 </main>
 </div>
 
-<!-- VUE FAQ -->
 <div id="faqView" hidden><header class="pagehead wrap">
   <a class="back glass" href="#/">← Retour à l'accueil</a>
   <h1>Foire Aux Questions</h1>
@@ -362,7 +320,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 </main>
 </div>
 
-<!-- VUE AVIS -->
 <div id="avisView" hidden><header class="pagehead wrap">
   <a class="back glass" href="#/">← Retour à l'accueil</a>
   <h1>Avis clients</h1>
@@ -371,7 +328,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 <main>
 <section class="wrap catpage">
   <div class="reviews-grid" id="allReviewsGrid"></div>
-  
   <div style="margin-top: 5rem;">
     <h2>Laisser un avis</h2>
     <p class="lead">Vous avez fait une séance avec moi ? Partagez votre expérience ! (Soumis à validation)</p>
@@ -397,7 +353,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 </main>
 </div>
 
-<!-- Vue Catalogue / Prestation -->
 <div id="catView" hidden><header class="pagehead wrap">
   <a class="back glass" href="#catalogues">← Retour aux catalogues</a>
   <h1 id="title">Portrait</h1>
@@ -414,7 +369,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 </main>
 </div>
 
-<!-- Vue Tarifs / Services Globaux -->
 <div id="tarifsView" hidden><header class="pagehead wrap">
   <a class="back glass" href="#/">← Retour à l'accueil</a>
   <h1>Grille des Tarifs & Options</h1>
@@ -430,7 +384,6 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 </main>
 </div>
 
-<!-- Modale Panneau d'Administration Secret -->
 <dialog id="adminModal" class="admin-modal">
   <div class="admin-content">
     <h3>Gestionnaire d'avis (Admin)</h3>
@@ -450,6 +403,7 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 </footer>
 
 <dialog id="lb" aria-label="Photo en grand"><img id="lbimg" alt=""><div class="bar"><button id="prev">Précédente</button><button id="next">Suivante</button><button id="close">Fermer</button></div></dialog>
+
 <script>
 const CONFIG = {
   nom: "Pierre Gallois",
@@ -517,7 +471,6 @@ $("foot").onclick = (e) => {
 function openAdminPanel() {
   const listEl = $("adminList");
   const allAvis = getAvis();
-  
   if (allAvis.length === 0) {
     listEl.innerHTML = "<p>Aucun avis pour le moment.</p>";
   } else {
@@ -784,4 +737,6 @@ function route() {
   }
 }
 renderHome(); addEventListener("hashchange", route); route();
-</script></body></html>
+</script>
+</body>
+</html>

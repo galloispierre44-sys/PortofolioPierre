@@ -184,7 +184,7 @@ dialog#lb .bar button:hover{background:rgba(255,255,255,0.3)}
 @media(max-width:760px){.contact-grid,.two,.about-box{grid-template-columns:1fr}nav .brand{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1,.chip,.pitch,.btns{opacity:1;transform:none}.card{clip-path:none}}
 
-nav .brand{font:700 0.95rem var(--display);padding:.5rem 1rem}
+nav .brand{font:700 0.95rem var(--display);padding:.5rem 1.1rem}
 .pagehead{padding:8rem 0 1rem}
 .back{display:inline-block;text-decoration:none;font-weight:600;padding:.5rem 1.1rem;border-radius:98px;margin-bottom:2rem;font-size:.9rem}
 .pagehead h1{font:700 clamp(2.4rem,8vw,5.5rem)/1 var(--display);letter-spacing:-0.03em}
@@ -474,10 +474,10 @@ function getAvis() {
   return JSON.parse(saved);
 }
 
-const FEATURED = ["portrait_of_black_man.jpg", "DSC02774.jpg", "DSC02758.jpg"];
+const FEATURED = ["DSC02774.jpg", "DSC02758.jpg"];
 
 const CATALOGUES = [
-  { id: "portrait", nom: "Portrait", prix: "25 €", desc: "Séances individuelles, profil pro ou souvenirs persos.", detail: "Durée moyenne : 45 minutes. Comprend un pack de 5 photos retouchées en haute qualité.", photos: ["portrait_of_black_man.jpg", "DSC02740-2.jpg", "DSC02758.jpg", "DSC02759.jpg"] },
+  { id: "portrait", nom: "Portrait", prix: "25 €", desc: "Séances individuelles, profil pro ou souvenirs persos.", detail: "Durée moyenne : 45 minutes. Comprend un pack de 5 photos retouchées en haute qualité.", photos: ["DSC02740-2.jpg", "DSC02758.jpg", "DSC02759.jpg"] },
   { id: "maison", nom: "Maison / Immobilier", prix: "60 €", desc: "Mise en valeur d'intérieurs et d'extérieurs.", detail: "Durée moyenne : 1h30 sur place. Comprend un pack de 12 à 20 photos retouchées pour couvrir l'ensemble des pièces et extérieurs.", photos: ["DSC02774.jpg", "DSC02792.jpg", "DSC02794.jpg"] },
   { id: "commerce", nom: "Commerce", prix: "60 €", desc: "Boutiques, produits et artisans locaux.", detail: "Durée moyenne : 1h à 2h. Comprend un pack de 12 à 15 photos professionnelles (produits, ambiance, équipe).", photos: [] },
   { id: "evenement", nom: "Événement", prix: "Sur devis", desc: "Petites fêtes, moments de vie et rencontres.", detail: "Durée variable selon l'événement. Couverture complète et livraison rapide des clichés.", photos: [] },

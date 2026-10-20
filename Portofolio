@@ -255,8 +255,8 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 <dialog id="legalModal" class="legal-modal">
   <div class="modal-content">
     <h3>Mentions Légales</h3>
-    <p><strong>Éditeur du site :</strong><br>Pierre Gallois — Photographe<br>Basé à Vouziers (08400)<br>E-mail : galloisp3@icloud.com</p>
-    <p><strong>Hébergement :</strong><br>Ce site est hébergé par Netlify, Inc.<br>512 2nd Street, Suite 200, San Francisco, CA 94107, USA.</p>
+    <p><strong>Éditeur du site :</strong><br>Pierre Gallois — Photographe<br>Basé à Vouziers (08400)<br>E-mail : pierrephoto08@gmail.com</p>
+    <p><strong>Hébergement :</strong><br>Ce site est hébergé par GitHub Pages.<br>GitHub, Inc. — 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.</p>
     <p><strong>Propriété intellectuelle :</strong><br>L'ensemble des photographies, textes et éléments visuels présents sur ce site sont la propriété exclusive de Pierre Gallois. Toute reproduction ou utilisation sans autorisation est interdite.</p>
     <div class="modal-close">
       <button class="btn main" id="closeLegal" style="width: 100%;">Fermer</button>
@@ -453,7 +453,7 @@ h3.sub{font:700 1.2rem var(--display);margin:4rem 0 1rem}
 <script>
 const CONFIG = {
   nom: "Pierre Gallois",
-  email: "galloisp3@icloud.com",
+  email: "pierrephoto08@gmail.com",
   lieu: "Basé à Vouziers, déplacements possibles.",
   pitch: "Des photos simples, naturelles et spontanées, sans prise de tête.",
   formEndpoint: "https://formspree.io/f/xljgkvzp",
